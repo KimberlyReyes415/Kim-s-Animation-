@@ -33,3 +33,7 @@ function frame() {
         boxes[i].render();
     }
 }
+    xpos1 = xpos1 + xstep1;
+    ypos1 = ypos1 + ystep1;
+    box1.style.top = ypos1 + 'px';
+    box1.style.left = xpos1 + 'px';

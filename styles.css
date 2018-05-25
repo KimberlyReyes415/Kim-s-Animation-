@@ -1,57 +1,69 @@
 #container {
-  width: 400px;
-  height: 400px;
-  position: relative;
-  background: white;
+    width: 400px;
+    height: 400px;
+    position: relative;
+    background: white;
 
 }
 
 #animation1 {
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  background: white;
-  top: 0px;
-  left: 0px;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background: pink;
+    top: 0px;
+    left: 0px;
 }
 
 #animation2 {
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  background: red;
-  top: 0px;
-  left: 0px;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background: red;
+    top: 0px;
+    left: 0px;
 }
 
 .light {
-  opacity: 0.2;
+    opacity: 0.2;
 }
+
 .medium {
-  opacity: 0.5;
+    opacity: 0.5;
 }
+
 .heavy {
-  opacity: 0.9;
+    opacity: 0.9;
 }
+
 .exampleone {
-  background-color: teal;
-  color: white;
+    background-color: teal;
+    color: white;
 }
 
 .exampletwo {
-  background-color: rgb(153,102,153);
-  color: rgb(255,255,204);
+    background-color: rgb(153, 102, 153);
+    color: rgb(255, 255, 204);
 }
 
 .examplethree {
-  background-color: #777799;
-  color: #FFFFFF;
+    background-color: #777799;
+    color: #FFFFFF;
 }
-@keyframes example {
-    0%   {background-color: red;}
-    25%  {background-color: yellow;}
-    50%  {background-color: blue;}
-    100% {background-color: green;}
+
+@keyframes example1 {
+    0% {
+        background-color: red;
+    }
+    25% {
+        background-color: yellow;
+    }
+    50% {
+        background-color: blue;
+    }
+    100% {
+        background-color: green;
+    }
 }
 
 div {
@@ -62,54 +74,75 @@ div {
 
 
 #animation2 {
-    animation-name: example;
+    animation-name: example1;
     animation-duration: 4s;
 }
 
 
 
 .gradient-example {
-  width: 50px;
-  height: 100px;
-  background-image: linear-gradient(blue, red);
+    width: 50px;
+    height: 100px;
+    background-image: linear-gradient(blue, red);
 
 
-  background-size: 25px;
-  background-size: 50%;
-  background-size: auto 50px;
-  background-size: auto 50%;
+    background-size: 25px;
+    background-size: 50%;
+    background-size: auto 50px;
+    background-size: auto 50%;
 
 
-  background-size: 25px 50px;
-  background-size: 50% 50%;
+    background-size: 25px 50px;
+    background-size: 50% 50%;
 }
+
 .main {
-  width: 530px;
+    width: 530px;
 }
 
 .left,
 .right {
-  width: 40%;
-  height: 12ex;
-  background-color: lightgray;
+    width: 40%;
+    height: 12ex;
+    background-color: lightgray;
 }
 
 .left {
-  -webkit-shape-outside: polygon(0 0, 100% 100%, 0 100%);
-  shape-outside: polygon(0 0, 100% 100%, 0 100%);
-  float: left;
-  -webkit-clip-path: polygon(0 0, 100% 100%, 0 100%);
-  clip-path: polygon(0 0, 100% 100%, 0 100%);
+    -webkit-shape-outside: polygon(0 0, 100% 100%, 0 100%);
+    shape-outside: polygon(0 0, 100% 100%, 0 100%);
+    float: left;
+    -webkit-clip-path: polygon(0 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 100%, 0 100%);
 }
 
 .right {
-  -webkit-shape-outside: polygon(100% 0, 100% 100%, 0 100%);
-  shape-outside: polygon(100% 0, 100% 100%, 0 100%);
-  float: right;
-  -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%);
-  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+    -webkit-shape-outside: polygon(100% 0, 100% 100%, 0 100%);
+    shape-outside: polygon(100% 0, 100% 100%, 0 100%);
+    float: right;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%);
 }
 
 p {
-  text-align: center;
+    text-align: center;
+}
+
+@keyframes example {
+    0% {
+        opacity: .33;
+    }
+    25% {
+        opacity: .66;
+    }
+    50% {
+        opacity: .88;
+    }
+    100% {
+        opacity: .1;
+    }
+}
+#animation1 {
+    animation-name: example;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
 }
