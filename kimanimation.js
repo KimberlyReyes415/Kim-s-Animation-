@@ -1,3 +1,24 @@
+var thing = document.getElementById("animation2");
+var container = document.getElementById("container");
+var mousecoords = document.getElementById("mousecoords");
+
+container.addEventListener("mousemove", printMouseCoords);
+
+function printMouseCoords(event) {
+    var mouseX = event.clientX;
+    var mouseY = event.clientY;
+    mousecoords.textContent = mouseX + ", " + mouseY;
+}
+
+container.addEventListener("mousemove", moveThing);
+
+function moveThing(event) {
+    var xPosition = event.clientX - container.getBoundingClientRect().left - (thing.clientWidth / 2);
+    var yPosition = event.clientY - container.getBoundingClientRect().top - (thing.clientHeight / 2);
+    thing.style.left = xPosition + "px";
+    thing.style.top = yPosition + "px";
+}
+
 function Box(xpos, ypos, xstep, ystep, id) {
     this.xpos = xpos;
     this.ypos = ypos;
@@ -37,3 +58,17 @@ function frame() {
     ypos1 = ypos1 + ystep1;
     box1.style.top = ypos1 + 'px';
     box1.style.left = xpos1 + 'px';
+
+window.addEventListener("keydown", function (event) {
+    if (event.key === "ArrowDown") {
+        box3.style.background = "blue";
+    } else if (event.key === "ArrowLeft") {
+        box3.style.background = "orange";
+    } else if (event.key === "ArrowRight") {
+        box3.style.background = "black";
+    } else if (event.key === "ArrowUp") {
+        box3.style.background = "violet";
+    } else {
+        box3.style.background = "green";
+    }
+});
