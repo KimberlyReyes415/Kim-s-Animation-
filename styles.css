@@ -2,7 +2,8 @@
   width: 900px;
   height: 900px;
   position: relative;
-  background:  palevioletred;
+  background:  lightblue
+      ;
   cursor: pointer;
 
 }
@@ -55,3 +56,10 @@
 }
 
 
+
+#animation2 {
+    animation-name: example;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+
+}
