@@ -20,6 +20,12 @@ function moveThing(event) {
 }
 
 
+
+
+
+
+
+
 var box1 = document.getElementById("animation1");
 var xpos1 = 0;
 var ypos1 = 0;
